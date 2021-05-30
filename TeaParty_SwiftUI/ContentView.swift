@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State var isPresented = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            Image("tea-background")
+                .resizable(capInsets: EdgeInsets(), resizingMode: .tile)
+            
+            Button(action: {
+                isPresented = true
+            }, label: {
+                Text("Enter Lounge")
+                    .padding(EdgeInsets(top: 20, leading: 100, bottom: 20, trailing: 100))
+                    .foregroundColor(.black)
+                    .background(Color.white)
+                    .border(Color.black)
+            })
+        }.sheet(isPresented: $isPresented, onDismiss: {}, content: {
+            Streamingview(isPresented: $isPresented)
+        })
     }
 }
 
