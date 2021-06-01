@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSCameraUsageDescription</key>
+	<string>Please enable access to the camera to be able to live-stream</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Please enable access to the microphone to be able to live-stream</string>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>

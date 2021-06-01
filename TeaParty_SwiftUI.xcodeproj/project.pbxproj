@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		12CC0895FC9C893A4FB00F45 /* Pods_TeaParty_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188A8B441D784EBC5C690FEE /* Pods_TeaParty_SwiftUI.framework */; };
+		F984198926641D32000C7FB0 /* StreamingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984198826641D32000C7FB0 /* StreamingController.swift */; };
+		F991A79226651DFA0035DD2F /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991A79126651DFA0035DD2F /* StreamingViewController.swift */; };
 		F9C0E5312662BE8B00EFFC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0E5302662BE8B00EFFC0B /* AppDelegate.swift */; };
 		F9C0E5332662BE8B00EFFC0B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0E5322662BE8B00EFFC0B /* SceneDelegate.swift */; };
 		F9C0E5352662BE8B00EFFC0B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0E5342662BE8B00EFFC0B /* ContentView.swift */; };
@@ -21,6 +23,8 @@
 		0A6299673A4787CF30E9793C /* Pods-TeaParty_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeaParty_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-TeaParty_SwiftUI/Pods-TeaParty_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		15C8115AE26707E143F636BB /* Pods-TeaParty_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeaParty_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-TeaParty_SwiftUI/Pods-TeaParty_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		188A8B441D784EBC5C690FEE /* Pods_TeaParty_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeaParty_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F984198826641D32000C7FB0 /* StreamingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingController.swift; sourceTree = "<group>"; };
+		F991A79126651DFA0035DD2F /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
 		F9C0E52D2662BE8B00EFFC0B /* TeaParty_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaParty_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9C0E5302662BE8B00EFFC0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F9C0E5322662BE8B00EFFC0B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,8 +88,10 @@
 			children = (
 				F9C0E5302662BE8B00EFFC0B /* AppDelegate.swift */,
 				F9C0E5322662BE8B00EFFC0B /* SceneDelegate.swift */,
-				F9C0E5342662BE8B00EFFC0B /* ContentView.swift */,
+				F984198826641D32000C7FB0 /* StreamingController.swift */,
+				F991A79126651DFA0035DD2F /* StreamingViewController.swift */,
 				F9C0E5492663DB2C00EFFC0B /* Streamingview.swift */,
+				F9C0E5342662BE8B00EFFC0B /* ContentView.swift */,
 				F9C0E5362662BE9B00EFFC0B /* Assets.xcassets */,
 				F9C0E53B2662BE9B00EFFC0B /* LaunchScreen.storyboard */,
 				F9C0E53E2662BE9B00EFFC0B /* Info.plist */,
@@ -202,6 +208,8 @@
 				F9C0E5332662BE8B00EFFC0B /* SceneDelegate.swift in Sources */,
 				F9C0E5352662BE8B00EFFC0B /* ContentView.swift in Sources */,
 				F9C0E54A2663DB2C00EFFC0B /* Streamingview.swift in Sources */,
+				F984198926641D32000C7FB0 /* StreamingController.swift in Sources */,
+				F991A79226651DFA0035DD2F /* StreamingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

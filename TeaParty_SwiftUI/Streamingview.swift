@@ -12,23 +12,27 @@ struct Streamingview: View {
     @Binding var isPresented: Bool
     
     var body: some View {
-        VStack {
-            HStack {
-                Spacer(minLength: 190)
-                Button(action: {
-                    isPresented = false
-                }, label: {
-                    Text("Leave")
-                        .font(.title)
-                        .padding(EdgeInsets(top: 10, leading: 40, bottom: 10, trailing: 40))
-                        .foregroundColor(.white)
-                        .background(Color.red)
-                })
+        ZStack {
+            SVC()
+            VStack {
+                HStack {
+                    Spacer(minLength: 190)
+                    Button(action: {
+                        
+                        
+                        isPresented = false
+                    }, label: {
+                        Text("Leave")
+                            .font(.title)
+                            .padding(EdgeInsets(top: 10, leading: 40, bottom: 10, trailing: 40))
+                            .foregroundColor(.white)
+                            .background(Color.red)
+                    })
+                    Spacer()
+                }
                 Spacer()
             }
-            Spacer()
         }
-        
     }
 }
 
