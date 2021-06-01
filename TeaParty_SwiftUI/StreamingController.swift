@@ -16,7 +16,7 @@ final class StreamingViewController: UIViewController {
   
   var subscriberView: UIView?
   
-  private var session: OTSession?
+  private static var session: OTSession?
   
 //  @IBOutlet private var leaveButton: UIButton!
 
@@ -28,20 +28,21 @@ final class StreamingViewController: UIViewController {
     connectToSession()
   }
 
-  @IBAction private func leave() {
-    var error: OTError?
-    session?.disconnect(&error)
-
-    if let error = error {
-      print("An error occurred disconnecting from the session", error)
-    } else {
-      navigationController?.popViewController(animated: true)
+    static func leave() {
+        var error: OTError?
+        session?.disconnect(&error)
+        
+        if let error = error {
+            print("An error occurred disconnecting from the session", error)
+        }
+//        else {
+//            navigationController?.popViewController(animated: true)
+//        }
     }
-  }
   
   private func connectToSession() {
     // 1
-    session = OTSession(
+    StreamingViewController.session = OTSession(
       apiKey: apiKey,
       sessionId: sessionId,
       delegate: self
@@ -49,7 +50,7 @@ final class StreamingViewController: UIViewController {
 
     // 2
     var error: OTError?
-    session?.connect(withToken: token, error: &error)
+    StreamingViewController.session?.connect(withToken: token, error: &error)
 
     // 3
     if let error = error {
@@ -65,7 +66,7 @@ final class StreamingViewController: UIViewController {
 
     // 2
     var error: OTError?
-    session?.publish(publisher, error: &error)
+    StreamingViewController.session?.publish(publisher, error: &error)
 
     // 3
     if let error = error {
@@ -101,7 +102,7 @@ final class StreamingViewController: UIViewController {
 
     // 2
     var error: OTError?
-    session?.subscribe(subscriber, error: &error)
+    StreamingViewController.session?.subscribe(subscriber, error: &error)
 
     // 3
     if let error = error {

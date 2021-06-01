@@ -19,6 +19,7 @@ struct Streamingview: View {
                     Spacer(minLength: 190)
                     Button(action: {
                         
+                        SVC.leave()
                         
                         isPresented = false
                     }, label: {

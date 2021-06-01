@@ -19,4 +19,8 @@ struct SVC: UIViewControllerRepresentable {
     func updateUIViewController(_ streamingViewController: StreamingViewController, context: Context) {
         streamingViewController.viewDidLoad()
     }
+    
+    static func leave() {
+        StreamingViewController.leave()
+    }
 }
