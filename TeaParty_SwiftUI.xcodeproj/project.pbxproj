@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		12CC0895FC9C893A4FB00F45 /* Pods_TeaParty_SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 188A8B441D784EBC5C690FEE /* Pods_TeaParty_SwiftUI.framework */; };
+		F9329767266958D5005685DB /* WebSocketController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9329764266958D5005685DB /* WebSocketController.swift */; };
+		F9329768266958D5005685DB /* Keyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9329765266958D5005685DB /* Keyboard.swift */; };
+		F9329769266958D5005685DB /* WebSocketTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9329766266958D5005685DB /* WebSocketTypes.swift */; };
+		F932976C26695985005685DB /* SocketView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F932976B26695985005685DB /* SocketView.swift */; };
 		F984198926641D32000C7FB0 /* StreamingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F984198826641D32000C7FB0 /* StreamingController.swift */; };
 		F991A79226651DFA0035DD2F /* StreamingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F991A79126651DFA0035DD2F /* StreamingViewController.swift */; };
 		F9C0E5312662BE8B00EFFC0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C0E5302662BE8B00EFFC0B /* AppDelegate.swift */; };
@@ -23,6 +27,10 @@
 		0A6299673A4787CF30E9793C /* Pods-TeaParty_SwiftUI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeaParty_SwiftUI.debug.xcconfig"; path = "Target Support Files/Pods-TeaParty_SwiftUI/Pods-TeaParty_SwiftUI.debug.xcconfig"; sourceTree = "<group>"; };
 		15C8115AE26707E143F636BB /* Pods-TeaParty_SwiftUI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TeaParty_SwiftUI.release.xcconfig"; path = "Target Support Files/Pods-TeaParty_SwiftUI/Pods-TeaParty_SwiftUI.release.xcconfig"; sourceTree = "<group>"; };
 		188A8B441D784EBC5C690FEE /* Pods_TeaParty_SwiftUI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TeaParty_SwiftUI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F9329764266958D5005685DB /* WebSocketController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketController.swift; sourceTree = "<group>"; };
+		F9329765266958D5005685DB /* Keyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Keyboard.swift; sourceTree = "<group>"; };
+		F9329766266958D5005685DB /* WebSocketTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebSocketTypes.swift; sourceTree = "<group>"; };
+		F932976B26695985005685DB /* SocketView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketView.swift; sourceTree = "<group>"; };
 		F984198826641D32000C7FB0 /* StreamingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingController.swift; sourceTree = "<group>"; };
 		F991A79126651DFA0035DD2F /* StreamingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StreamingViewController.swift; sourceTree = "<group>"; };
 		F9C0E52D2662BE8B00EFFC0B /* TeaParty_SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TeaParty_SwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -65,6 +73,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F932975F26695799005685DB /* Streaming */ = {
+			isa = PBXGroup;
+			children = (
+				F984198826641D32000C7FB0 /* StreamingController.swift */,
+				F991A79126651DFA0035DD2F /* StreamingViewController.swift */,
+			);
+			path = Streaming;
+			sourceTree = "<group>";
+		};
+		F93297632669584D005685DB /* Socket */ = {
+			isa = PBXGroup;
+			children = (
+				F9329765266958D5005685DB /* Keyboard.swift */,
+				F9329764266958D5005685DB /* WebSocketController.swift */,
+				F9329766266958D5005685DB /* WebSocketTypes.swift */,
+			);
+			path = Socket;
+			sourceTree = "<group>";
+		};
 		F9C0E5242662BE8B00EFFC0B = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +115,10 @@
 			children = (
 				F9C0E5302662BE8B00EFFC0B /* AppDelegate.swift */,
 				F9C0E5322662BE8B00EFFC0B /* SceneDelegate.swift */,
-				F984198826641D32000C7FB0 /* StreamingController.swift */,
-				F991A79126651DFA0035DD2F /* StreamingViewController.swift */,
+				F93297632669584D005685DB /* Socket */,
+				F932975F26695799005685DB /* Streaming */,
 				F9C0E5492663DB2C00EFFC0B /* Streamingview.swift */,
+				F932976B26695985005685DB /* SocketView.swift */,
 				F9C0E5342662BE8B00EFFC0B /* ContentView.swift */,
 				F9C0E5362662BE9B00EFFC0B /* Assets.xcassets */,
 				F9C0E53B2662BE9B00EFFC0B /* LaunchScreen.storyboard */,
@@ -205,11 +233,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C0E5312662BE8B00EFFC0B /* AppDelegate.swift in Sources */,
+				F932976C26695985005685DB /* SocketView.swift in Sources */,
 				F9C0E5332662BE8B00EFFC0B /* SceneDelegate.swift in Sources */,
+				F9329768266958D5005685DB /* Keyboard.swift in Sources */,
 				F9C0E5352662BE8B00EFFC0B /* ContentView.swift in Sources */,
 				F9C0E54A2663DB2C00EFFC0B /* Streamingview.swift in Sources */,
 				F984198926641D32000C7FB0 /* StreamingController.swift in Sources */,
 				F991A79226651DFA0035DD2F /* StreamingViewController.swift in Sources */,
+				F9329767266958D5005685DB /* WebSocketController.swift in Sources */,
+				F9329769266958D5005685DB /* WebSocketTypes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

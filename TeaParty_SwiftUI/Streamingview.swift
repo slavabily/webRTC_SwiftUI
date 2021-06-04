@@ -14,6 +14,7 @@ struct Streamingview: View {
     var body: some View {
         ZStack {
             SVC()
+            SocketView()
             VStack {
                 HStack {
                     Spacer(minLength: 190)
