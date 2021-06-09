@@ -22,11 +22,20 @@ final class StreamingViewController: UIViewController {
 
   override func viewDidLoad() {
     super.viewDidLoad()
-//    leaveButton.layer.cornerRadius = leaveButton.frame.size.height / 2
-//    navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     
     connectToSession()
+    
+    let notificationCenter = NotificationCenter.default
+    notificationCenter.addObserver(self, selector: #selector(appMovedToForeground), name: UIApplication.didBecomeActiveNotification, object: nil)
+
+//    leaveButton.layer.cornerRadius = leaveButton.frame.size.height / 2
+//    navigationController?.interactivePopGestureRecognizer?.isEnabled = false
   }
+
+@objc func appMovedToForeground() {
+    connectToSession()
+    print("App moved to foreground!")
+}
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
