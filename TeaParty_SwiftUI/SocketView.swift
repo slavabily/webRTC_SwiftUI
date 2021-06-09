@@ -28,6 +28,8 @@ struct SocketView: View {
               .foregroundColor(q.answered ? .green : .red)
           }
         }
+        .frame(height: 200)
+        Spacer()
         Divider()
         // 5
         TextField("Ask a new question", text: $newQuestion, onCommit: {
