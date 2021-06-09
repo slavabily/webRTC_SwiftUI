@@ -27,6 +27,12 @@ final class StreamingViewController: UIViewController {
     
     connectToSession()
   }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        connectToSession()
+    }
 
     static func leave() {
         var error: OTError?
