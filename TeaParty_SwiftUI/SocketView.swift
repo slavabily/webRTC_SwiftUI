@@ -12,7 +12,7 @@ struct SocketView: View {
     @State var newQuestion: String = ""
     
     // 2
-//    @ObservedObject var keyboard: Keyboard = .init()
+    @ObservedObject var keyboard: Keyboard = .init()
     @ObservedObject var socket: WebSocketController = .init()
     
     var body: some View {
@@ -39,8 +39,8 @@ struct SocketView: View {
         })
           .textFieldStyle(RoundedBorderTextFieldStyle())
           .padding(.horizontal)
-//          .padding(.bottom, keyboard.height)
-//          .edgesIgnoringSafeArea(keyboard.height > 0 ? .bottom : [])
+          .padding(.bottom, keyboard.height * 2)
+          .edgesIgnoringSafeArea(keyboard.height > 0 ? .bottom : [])
       }
       .padding(.vertical)
       // 6

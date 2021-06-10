@@ -8,27 +8,27 @@
 import SwiftUI
 
 struct Streamingview: View {
-    
     @Binding var isPresented: Bool
     
     var body: some View {
-        ZStack {
+        ZStack(alignment: .leading) {
             SVC()
             SocketView()
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: .center)
+                .position(x: 100, y: 450.0)
             VStack {
                 HStack {
-                    Spacer(minLength: 190)
+                    Spacer(minLength: 250)
                     Button(action: {
-                        
                         SVC.leave()
-                        
                         isPresented = false
                     }, label: {
                         Text("Leave")
-                            .font(.title)
-                            .padding(EdgeInsets(top: 10, leading: 40, bottom: 10, trailing: 40))
+                            .font(.headline)
+                            .padding(EdgeInsets(top: 10, leading: 30, bottom: 10, trailing: 30))
                             .foregroundColor(.white)
                             .background(Color.red)
+                            .clipShape(Ellipse())
                     })
                     Spacer()
                 }
